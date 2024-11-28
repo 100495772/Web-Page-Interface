@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Papá Noel</title>
+
+    <!-- Preconexión para Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style_main.css">
+
+    <!-- Preconexión a Google Fonts para optimizar la carga de las fuentes. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofia&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="Logo" class="d-inline-block align-text-top logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Mapa</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Envía tu carta</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="juegaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        ¡Juega!
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="juegaDropdown">
+                        <li><a class="dropdown-item" href="#">Juego 1</a></li>
+                        <li><a class="dropdown-item" href="#">Juego 2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="verPapáNoelDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Ver a Papá Noel
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="juegaDropdown">
+                        <li><a class="dropdown-item" href="#">Videollamada con Papá Noel</a></li>
+                        <li><a class="dropdown-item" href="#">Viaje al pueblo de Papá Noel</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex me-3">
+                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+            <a href="#" class="btn btn-outline-primary me-2">Iniciar sesión</a>
+            <a href="#" class="btn btn-outline-primary me-2">Registrarse</a>
+        </div>
+    </div>
+</nav>
+
+<section class="main-page">
+    <div class="main-content container">
+        <h1>¡Estás en el portal hacia el mundo mágico de Papá Noel!</h1>
+        <div class="custom-counter">
+            <span class="label">faltan</span>
+            <span class="days">45</span>
+            <span class="unit">días</span>
+            <span class="hours">17</span>
+            <span class="unit">horas</span>
+            <span class="minutes">32</span>
+            <span class="unit">minutos</span>
+            <span class="seconds">05</span>
+            <span class="unit">segundos</span>
+        </div>
+    </div>
+</section>
+
+<section class="select-visitor-section text-center my-5">
+    <h2 class="mb-4">¿Quién nos visita hoy?</h2>
+    <div class="d-flex justify-content-center">
+        <form>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="visitorType" id="childOption" value="child">
+                <label class="form-check-label" for="childOption">
+                    Soy un niño o una niña
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="visitorType" id="adultOption" value="adult">
+                <label class="form-check-label" for="adultOption">
+                    Soy un adulto ayudando a un/a pequeño/a 🎄
+                </label>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="write-letter-section text-center py-5">
+    <h2 class="mb-4">¡Escribe tu carta para Papá Noel y se la enviamos al instante!</h2>
+    <div class="container">
+        <div class="row align-items-center gy-5">
+            <div class="col-md-6">
+                <img src="images/escribe-tu-carta.png" alt="Niños escribiendo una carta" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <p class="letter-description">
+                    ¡Haz llegar tus deseos directamente al Polo Norte! Escribe una carta especial a Papá Noel y cuéntale tus sueños, regalos favoritos o un mensaje de agradecimiento. Solo tienes que llenar el formulario y enviar tu carta.
+                </p>
+                <button class="btn send-letter-btn">Quiero mandar mi carta</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="map-section text-center text-white py-5">
+    <div class="container gy-5">
+        <h2 class="mb-4">
+            ¡Localiza a Papá Noel en el mapa y no te pierdas ninguno de sus pasos!
+        </h2>
+        <p class="mb-4">
+            ¡Sigue el recorrido mágico de Papá Noel en tiempo real! Mira en el mapa dónde se encuentra en este momento y descubre las paradas que hace alrededor del mundo mientras lleva alegría y regalos a todos. ¡La magia de la Navidad está a solo un vistazo!
+        </p>
+        <button class="btn map-btn">Ver mapa</button>
+    </div>
+</section>
+
+
+<footer class="footer py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Logo -->
+            <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                <img src="images/logo.png" alt="Logo Papá Noel" class="footer-logo">
+            </div>
+
+            <!-- Enlaces de interés -->
+            <div class="col-md-4">
+                <h5 class="mb-3">Enlaces de interés</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Viaje al pueblo de Papá Noel</a></li>
+                    <li><a href="#" class="footer-link">Conoce a Papá Noel</a></li>
+                    <li><a href="#" class="footer-link">Personaliza tu elfo</a></li>
+                    <li><a href="#" class="footer-link">Política de privacidad</a></li>
+                </ul>
+            </div>
+
+            <!-- Redes sociales y contacto -->
+            <div class="col-md-4">
+                <h5 class="mb-3">Síguenos en redes</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Instagram</a></li>
+                    <li><a href="#" class="footer-link">Youtube</a></li>
+                    <li><a href="#" class="footer-link">Tik Tok</a></li>
+                </ul>
+                <h5 class="mt-4">Contáctanos</h5>
+                <p class="mb-0"><a href="mailto:support@papanoel.com" class="footer-link">support@papanoel.com</a></p>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="row mt-4">
+            <div class="col text-center">
+                <p class="copyright mb-0">© 2024 Copyright. Todos los derechos reservados</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>

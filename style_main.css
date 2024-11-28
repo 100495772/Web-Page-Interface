@@ -1,0 +1,222 @@
+body {
+    background-color:#d32f2f;
+    color: #fff;
+    padding-top: 100px;
+}
+
+h1 {
+    font-family: "Berkshire Swash", cursive;
+    font-size: 60px;
+}
+
+h2 {
+    font-family: "Berkshire Swash", cursive;
+    font-size: 40px;
+}
+
+p {
+    font-family: "Poppins", cursive;
+    font-size: 20px;
+}
+
+h5, .footer-link, .copyright {
+    font-family: "Poppins", cursive;
+    font-size: 10px;
+}
+
+/* padding para cada página */
+.main-page, .write-letter-section, .map-section {
+    padding: 10% ;
+}
+
+
+
+.custom-counter {
+    display: flex; /* Distribuye los elementos en línea */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    background-color: #fdf3e9;
+    border: 2px solid #b06a39;
+    border-radius: 20px;
+    font-family: 'Sofia', cursive;
+    gap: 10px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.custom-counter .label {
+    color: #122a5d;
+    font-size: 1.5vw;
+    letter-spacing: 1px;
+}
+
+.custom-counter .days,
+.custom-counter .hours,
+.custom-counter .minutes,
+.custom-counter .seconds {
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+
+.custom-counter .days {
+    color: #b06a39;
+}
+
+.custom-counter .hours {
+    color: #7a9ba6;
+}
+
+.custom-counter .minutes {
+    color: #122a5d;
+}
+
+.custom-counter .seconds {
+    color: #e5b4c3;
+}
+
+.custom-counter .unit {
+    color: #122a5d; /* Color para las etiquetas de las unidades (días, horas, etc.) */
+    font-size: 1.5vw;
+
+}
+
+
+.logo {
+    width: 200px;
+    height: 100px;
+    object-fit: cover; /* Ajustar la imagen para que no se distorsione */
+}
+
+
+.navbar {
+    background-color: rgba(255, 241, 212, 1);
+
+}
+
+.navbar a {
+    color: #000 ;
+    font-family: "Mali", cursive;
+    font-weight: 700;
+    text-align: center;
+}
+
+.main-content {
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+.main-content .countdown {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 5px;
+    display: inline-block;
+    color: #000;
+}
+
+.btn {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: smaller;
+    background-color: #d32f2f;
+    color: #fff;
+    border: 3px solid #b71c1c;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 4px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: mistyrose;
+    color: #b71c1c;
+    transform: scale(1.05); /* Ligera ampliación */
+    border: 3px solid #b71c1c;
+}
+
+.main-page {
+    background-image: url("../images/portada.png");
+    background-position: center; /* Centra la imagen de fondo en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Escala la imagen para cubrir todo el fondo del contenedor */
+}
+
+.map-section{
+    background-image: url("../images/trineo_fondo_oscuro.png"); /* Imagen de fondo */
+    background-position: center; /* Centra la imagen de fondo en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Escala la imagen para cubrir todo el fondo del contenedor */
+}
+
+/*****************SECCIÓN ELIGE TU TIPO DE USUARIO (adulto o niño)*******************/
+.select-visitor-section {
+    background-color: rgba(255, 241, 212, 1); /* Fondo claro */
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.select-visitor-section h2 {
+    color: #333;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    font-size: 2vw;
+    color: #333;
+}
+
+.form-check-input {
+    width: 20px;
+    height: 20px;
+}
+
+.form-check-label {
+    color: #333;
+}
+
+.form-check-input:checked + .form-check-label {
+    color: #f54b4b; /* Cambia el color del texto al seleccionar */
+}
+
+
+/*******+footer**********/
+.footer {
+    background-color: rgba(255, 241, 212, 1);
+    text-align: center;
+}
+
+.footer h5 {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    font-family: "Mali", cursive;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #a94442;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: black;
+    font-family: "Mali", cursive;
+}
+
+.footer-logo {
+    max-width: 150px; /* Ajusta el tamaño del logo */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centra el logo */
+}
+
+
+
+
