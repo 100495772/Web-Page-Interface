@@ -17,6 +17,8 @@ h2 {
 p {
     font-family: "Poppins", cursive;
     font-size: 20px;
+    color: #ffffff;
+
 }
 
 h5, .footer-link, .copyright {
@@ -29,7 +31,9 @@ h5, .footer-link, .copyright {
     padding: 10% ;
 }
 
-
+#p1, #p2 {
+    padding-top: 50px;
+}
 
 .custom-counter {
     display: flex; /* Distribuye los elementos en línea */
@@ -95,11 +99,13 @@ h5, .footer-link, .copyright {
 }
 
 .navbar a {
-    color: #000 ;
+    color: #333;
     font-family: "Mali", cursive;
     font-weight: 700;
     text-align: center;
 }
+
+
 
 .main-content {
     text-align: center;
@@ -152,14 +158,16 @@ h5, .footer-link, .copyright {
     background-size: cover; /* Escala la imagen para cubrir todo el fondo del contenedor */
 }
 
+
+
 /*****************SECCIÓN ELIGE TU TIPO DE USUARIO (adulto o niño)*******************/
-.select-visitor-section {
+.select-visitor-section, .viaje-al-pueblo-section {
     background-color: rgba(255, 241, 212, 1); /* Fondo claro */
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.select-visitor-section h2 {
+.select-visitor-section h2, .viaje-al-pueblo-section h2, .viaje-al-pueblo-section p {
     color: #333;
 }
 
@@ -216,6 +224,151 @@ h5, .footer-link, .copyright {
     display: block;
     margin: 0 auto; /* Centra el logo */
 }
+
+
+/********** PÁGINA ENVÍA TU CARTA *******************/
+.carta-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #f9c1c1; /* Fondo claro */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.titulo-carta {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.form-carta {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 0 0 48%; /* Ocupa el 48% del espacio */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: "Poppins", sans-serif;
+}
+
+.form-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea.form-control {
+    resize: none;
+}
+
+/***************************************/
+
+/*******************************PÁGINA SEGUIR MAPA*****************************/
+
+#p1 {
+    background-color: white;
+}
+
+.map-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ocupa toda la pantalla */
+}
+
+
+.titulo-mapa {
+    font-size: 2rem;
+    color: #4d0000; /* Texto oscuro */
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Contenedor del mapa */
+.map-container {
+    position: relative;
+    flex: 1; /* Ocupa todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Cuadros de información en la parte inferior */
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Imagen del mapa */
+.map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+    z-index: 1;
+}
+
+/* Contenedor de cuadros */
+.info-container {
+    position: relative;
+    bottom: 20px; /* Ajusta la posición desde la parte inferior */
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    z-index: 2; /* Encima de la imagen */
+}
+
+/* Cuadro de información */
+.info-box {
+    background-color: #f4a1a1; /* Fondo rosado */
+    color: #4d0000; /* Texto oscuro */
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Círculo del porcentaje */
+.circle {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    background: conic-gradient(#993333 0% 23%, #f4c1c1 23% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4d0000;
+    border: 4px solid #f4a1a1;
+}
+
+.circle span {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+
 
 
 
