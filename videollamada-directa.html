@@ -15,9 +15,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofia&display=swap" rel="stylesheet">
 
-    <!-- Para el calendario seleccionable -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 </head>
 <body>
@@ -63,78 +60,32 @@
 </nav>
 
 
-<section id="p3" class="reserva-container">
-    <!-- Título principal -->
-    <h1 class="titulo-reserva text-center">Reserva tu videollamada con Papá Noel</h1>
+<body>
+<section class="videollamada-container">
+    <div class="container text-center py-5">
+        <h2 class="titulo">Videollamada con Papá Noel 🎅</h2>
 
-    <!-- Paso 1: Elegir fecha -->
-    <div class="step text-center my-5">
-        <h2 class="step-title">1. Elige una fecha 📅</h2>
-        <div class="calendar-container mx-auto">
-            <input type="text" id="date-picker" class="form-control text-center" placeholder="Selecciona una fecha" readonly>
+        <!-- Relleno para la videollamada -->
+        <div class="video-wrapper my-4">
+            <div class="video-placeholder">
+                <p class="video-text">Aquí aparecerá el vídeo de Papá Noel 🎥</p>
+            </div>
+        </div>
+
+        <!-- Controles de la videollamada -->
+        <div class="controls-container">
+            <button class="btn btn-control btn-microphone" title="Activar/Desactivar micrófono">
+                🎤
+            </button>
+            <button class="btn btn-control btn-camera" title="Activar/Desactivar cámara">
+                🎥
+            </button>
+            <button class="btn btn-control btn-end-call" title="Finalizar llamada">
+                🔴
+            </button>
         </div>
     </div>
-
-
-    <!-- Paso 2: Elegir hora -->
-    <div class="step text-center my-5">
-        <h2 class="step-title">2. Elige una hora ⏰</h2>
-        <div class="time-container mx-auto">
-            <select class="form-select" aria-label="Selecciona una hora">
-                <option selected>Selecciona una hora</option>
-                <option value="10:00">10:00 AM</option>
-                <option value="11:00">11:00 AM</option>
-                <option value="15:00">3:00 PM</option>
-                <option value="16:00">4:00 PM</option>
-            </select>
-        </div>
-    </div>
-
-    <!-- Paso 3: Datos del formulario -->
-    <div class="step text-center my-5">
-        <h2 class="step-title">3. Datos</h2>
-        <form class="datos-form mx-auto">
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label for="child-name" class="form-label">Nombre del pequeño/a:</label>
-                    <input type="text" id="child-name" class="form-control" placeholder="Nombre del pequeño/a" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="child-age" class="form-label">Edad del pequeño/a:</label>
-                    <input type="number" id="child-age" class="form-control" placeholder="Edad del pequeño/a" required>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label for="adult-name" class="form-label">Nombre del adulto acompañante:</label>
-                    <input type="text" id="adult-name" class="form-control" placeholder="Nombre del adulto" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="email" class="form-label">Email:</label>
-                    <input type="email" id="email" class="form-control" placeholder="nombre@ejemplo.com" required>
-                </div>
-            </div>
-            <button type="submit" class="btn">Reservar videollamada</button>
-        </form>
-    </div>
-
-    <a class="btn btn-primary" href="videollamada-directa.html">Acceder a videollamada directa YA</a>
-
 </section>
-
-<!-- AÑADIR AL ARCHIVO .JS CUANDO SE CREE -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        flatpickr("#date-picker", {
-            altInput: true,
-            altFormat: "F j, Y",
-            dateFormat: "Y-m-d",
-            minDate: "today",
-            maxDate: "2024-12-31",
-        });
-    });
-</script>
-
 
 <footer class="footer py-5">
     <div class="container">
