@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Papá Noel</title>
+
+    <!-- Preconexión para Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style_main.css">
+
+    <!-- Preconexión a Google Fonts para optimizar la carga de las fuentes. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofia&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="Logo" class="d-inline-block align-text-top logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="mapa.html">Mapa</a></li>
+                <li class="nav-item"><a class="nav-link" href="escribe-tu-carta.html">Envía tu carta</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="juegaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        ¡Juega!
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="juegaDropdown">
+                        <li><a class="dropdown-item" href="#">Juego 1</a></li>
+                        <li><a class="dropdown-item" href="#">Juego 2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="verPapáNoelDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Ver a Papá Noel
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="juegaDropdown">
+                        <li><a class="dropdown-item" href="#">Videollamada con Papá Noel</a></li>
+                        <li><a class="dropdown-item" href="#">Viaje al pueblo de Papá Noel</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex me-3">
+                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+            <a href="#" class="btn btn-outline-primary me-2 ">Iniciar sesión</a>
+            <a href="#" class="btn btn-outline-primary me-2 ">Registrarse</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero-section">
+    <div class="hero-image">
+        <div class="hero-overlay">
+            <div class="hero-text text-center">
+                <h1 class="hero-title">Embárcate en un viaje mágico al Pueblo de Papá Noel</h1>
+                <p class="hero-description">Conoce a Papá Noel, visita su oficina de correos, explora el taller de los elfos y vive la magia navideña en cada rincón.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Visita la oficina de correos -->
+<section class="visit-section">
+    <div class="container py-5">
+        <h2 class="section-title text-center mb-4">Visita la oficina de correos de Papá Noel</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="images/oficina-cartas.png" alt="Oficina de Correos" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <ul>
+                    <li>Este es el sitio donde llegan todas las cartas dirigidas a Papá Noel.</li>
+                    <li>Descubrirás cómo clasifican las cartas los elfos.</li>
+                    <li>Escribe y envía tu propia carta a Papá Noel.</li>
+                    <li>Descubre cartas especiales de niños de todo el mundo.</li>
+                    <li>Conoce a los elfos y aprende sobre sus tareas en la oficina.</li>
+                </ul>
+                <button class="btn mt-3">Reservar visita</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Visita el taller de elfos -->
+<section class="visit-section bg-rosado">
+    <div class="container py-5">
+        <h2 class="section-title text-center mb-4">Visita el taller de elfos</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="images/oficina-elfos.png" alt="Taller de Elfos" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <ul>
+                    <li>Observa cómo los elfos preparan los regalos en el taller.</li>
+                    <li>Conoce los secretos de la fabricación de juguetes navideños.</li>
+                    <li>Participa en actividades de creación de adornos y decoraciones.</li>
+                    <li>Escucha historias y tradiciones de la Navidad contadas por los elfos.</li>
+                    <li>Toma fotos en el taller rodeado de juguetes y herramientas mágicas.</li>
+                    <li>Recibe un certificado especial de "Ayudante de los Elfos".</li>
+                </ul>
+                <button class="btn  mt-3">Reservar visita</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Visita la granja de renos -->
+<section class="visit-section">
+    <div class="container py-5">
+        <h2 class="section-title text-center mb-4">Visita la granja de renos</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="images/renos.png" alt="Granja de Renos" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <ul>
+                    <li>Conoce de cerca a los renos de Papá Noel, incluyendo a Rudolph y sus amigos.</li>
+                    <li>Aprende sobre el cuidado y entrenamiento de los renos para su gran noche de vuelo.</li>
+                    <li>Alimenta y acaricia a los renos.</li>
+                    <li>Haz fotos inolvidables junto a los renos.</li>
+                    <li>Zona de descanso y tienda de recuerdos con artículos temáticos de los renos de Papá Noel.</li>
+                </ul>
+                <button class="btn mt-3">Reservar visita</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reseñas-section py-5">
+    <div class="container text-center">
+        <h2 class="reseñas-title">¡Reseñas y opiniones de otros aventureros! ⭐</h2>
+        <div class="row mt-4">
+            <!-- Reseña 1 -->
+            <div class="col-md-4">
+                <div class="reseña-card shadow-sm">
+                    <div class="reseña-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="reseña-text">Una experiencia mágica en cada rincón. Mis hijos no podían dejar de hablar de los renos y el taller de los elfos. ¡Totalmente recomendable!</p>
+                    <p class="reseña-author">Sofía R.</p>
+                </div>
+            </div>
+            <!-- Reseña 2 -->
+            <div class="col-md-4">
+                <div class="reseña-card shadow-sm">
+                    <div class="reseña-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="reseña-text">Ver a Papá Noel en persona fue increíble. El ambiente navideño es perfecto, y los elfos fueron muy amables. ¡Volveríamos sin dudarlo!</p>
+                    <p class="reseña-author">Ana María del Pilar</p>
+                </div>
+            </div>
+            <!-- Reseña 3 -->
+            <div class="col-md-4">
+                <div class="reseña-card shadow-sm">
+                    <div class="reseña-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="reseña-text">La visita al pueblo superó nuestras expectativas. Cada detalle está lleno de magia navideña. Perfecto para familias.</p>
+                    <p class="reseña-author">Harry Goldman</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Logo -->
+            <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                <img src="images/logo.png" alt="Logo Papá Noel" class="footer-logo">
+            </div>
+
+            <!-- Enlaces de interés -->
+            <div class="col-md-4">
+                <h5 class="mb-3">Enlaces de interés</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Viaje al pueblo de Papá Noel</a></li>
+                    <li><a href="#" class="footer-link">Conoce a Papá Noel</a></li>
+                    <li><a href="#" class="footer-link">Personaliza tu elfo</a></li>
+                    <li><a href="#" class="footer-link">Política de privacidad</a></li>
+                </ul>
+            </div>
+
+            <!-- Redes sociales y contacto -->
+            <div class="col-md-4">
+                <h5 class="mb-3">Síguenos en redes</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Instagram</a></li>
+                    <li><a href="#" class="footer-link">Youtube</a></li>
+                    <li><a href="#" class="footer-link">Tik Tok</a></li>
+                </ul>
+                <h5 class="mt-4">Contáctanos</h5>
+                <p class="mb-0"><a href="mailto:support@papanoel.com" class="footer-link">support@papanoel.com</a></p>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="row mt-4">
+            <div class="col text-center">
+                <p class="copyright mb-0">© 2024 Copyright. Todos los derechos reservados</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>
