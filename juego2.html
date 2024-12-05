@@ -1,18 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <!-- Preconexión para Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Preconexión a Google Fonts para optimizar la carga de las fuentes. -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofia&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Papá Noel</title>
+    <!-- Añadir a style_main.css -->
+    <style>
+      .juego-container {
+            padding: 40px 20px;
+        }
+
+        /* Título principal */
+        .titulo-juego {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 50px;
+            font-weight: bold;
+        }
+
+      #juego-regalos {
+            position: relative;
+            width: 540px;
+            height: 600px;
+            border: 2px solid #333;
+            overflow: hidden;
+            background-color: #fff;
+            background-image: url('/images/juego-background2.png');
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+        .regalo {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url('/images/regalo.png'); /* Replace with your regalo image */
+            background-size: cover;
+        }
+        #player {
+            position: absolute;
+            bottom: 10px;
+            left: 175px;
+            width: 70px;
+            height: 70px;
+            background-image: url('/images/player.png'); /* Replace with your player image */
+            background-size: cover;
+        }
+        #puntos {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+        }
+        #contador {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+        }
+    </style>
+
+    <!-- Preconexión para Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style_main.css">
+
+    <!-- Preconexión a Google Fonts para optimizar la carga de las fuentes. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofia&display=swap" rel="stylesheet">
+
+    <!-- Para el calendario seleccionable -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="Logo" class="d-inline-block align-text-top logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="mapa.html">Mapa</a></li>
+                <li class="nav-item"><a class="nav-link" href="escribe-tu-carta.html">Envía tu carta</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="juegaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        ¡Juega!
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="juegaDropdown">
+                        <li><a class="dropdown-item" href="#">Juego 1</a></li>
+                        <li><a class="dropdown-item" href="#">Juego 2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="verPapáNoelDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Ver a Papá Noel
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="juegaDropdown">
+                        <li><a class="dropdown-item" href="#">Videollamada con Papá Noel</a></li>
+                        <li><a class="dropdown-item" href="#">Viaje al pueblo de Papá Noel</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex me-3">
+                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+            <a href="#" class="btn btn-outline-primary me-2 ">Iniciar sesión</a>
+            <a href="#" class="btn btn-outline-primary me-2 ">Registrarse</a>
+        </div>
+    </div>
+</nav>
 
+
+<section id="p3" class="juego-container d-flex flex-column align-items-center">
+    <!-- Título principal -->
+    <h1 class="titulo-juego text-center">¡Atrapa los regalos!</h1>
+
+    <!-- Contenedor del juego-->
+    <div id="juego-regalos" class="d-flex flex-column align-items-center justify-content-center">
+      <div id="puntos">Puntos: 0</div>
+      <div id="contador">Tiempo: 60</div>
+      <div id="player"></div>
+      <button id="boton-empezar" class="btn btn-primary mt-3" onclick="empezarJuego()">Empezar</button>
+  </div>
+</section>
+
+<!-- AÑADIR AL ARCHIVO .JS CUANDO SE CREE -->
+<script>
+  const divJuego = document.getElementById('juego-regalos');
+  const player = document.getElementById('player');
+  const puntosDisplay = document.getElementById('puntos');
+  const contadorDisplay = document.getElementById('contador');
+
+  let puntos = 0;
+  let contador = 60;
+  let gameInterval;
+  let regaloInterval;
+
+  function empezarJuego() {
+      gameInterval = setInterval(actualizarContador, 1000);
+      regaloInterval = setInterval(crearRegalo, 1000);
+      puntos = 0;
+      contador = 60;
+      document.getElementById('boton-empezar').style.visibility = 'hidden'
+  }
+
+  document.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+          moverPlayer(event);
+      }
+  });
+
+  function actualizarContador() {
+      contador--;
+      contadorDisplay.textContent = `Tiempo: ${contador}`;
+      if (contador <= 2) {
+          clearInterval(regaloInterval);
+      }
+      if (contador <= 0) {
+          terminarJuego();
+      }
+  }
+
+  function crearRegalo() {
+      const regalo = document.createElement('div');
+      regalo.classList.add('regalo');
+      regalo.style.left = Math.random() * (divJuego.clientWidth - 50) + 'px';
+      regalo.style.top = '0px';
+
+      // Rotación aleatoria del sprite de los regalos
+      const randomRotation = Math.random() * 360;
+      regalo.style.transform = `rotate(${randomRotation}deg)`;
+
+      divJuego.appendChild(regalo);
+
+      let fallInterval = setInterval(() => {
+          regalo.style.top = (regalo.offsetTop + 5) + 'px';
+          if (regalo.offsetTop > divJuego.clientHeight) {
+              clearInterval(fallInterval);
+              divJuego.removeChild(regalo);
+          }
+          comprobarColision(regalo, fallInterval);
+      }, 25);
+  }
+
+  function comprobarColision(regalo, fallInterval) {
+      const regaloRect = regalo.getBoundingClientRect();
+      const playerRect = player.getBoundingClientRect();
+
+      if (
+          regaloRect.bottom > playerRect.top &&
+          regaloRect.top < playerRect.bottom &&
+          regaloRect.right > playerRect.left &&
+          regaloRect.left < playerRect.right
+      ) {
+          puntos++;
+          puntosDisplay.textContent = `Puntos: ${puntos}`;
+          clearInterval(fallInterval);
+          divJuego.removeChild(regalo);
+      }
+  }
+
+  let playerSpeed = 15;   //Velocidad horizontal del jugador
+
+  function moverPlayer(event) {
+      const playerRect = player.getBoundingClientRect();
+      if (event.key === 'ArrowLeft' && playerRect.left > divJuego.offsetLeft) {
+          player.style.left = (player.offsetLeft - playerSpeed) + 'px';
+      }
+      if (event.key === 'ArrowRight' && playerRect.right < divJuego.offsetLeft + divJuego.clientWidth) {
+          player.style.left = (player.offsetLeft + playerSpeed) + 'px';
+      }
+  }
+
+  function terminarJuego() {
+      clearInterval(gameInterval);
+      alert(`¡Fin del juego!\nPuntuación: ${puntos}`);
+      document.getElementById('boton-empezar').style.visibility = 'visible'
+
+  }
+</script>
+
+
+<footer class="footer py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Logo -->
+            <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                <img src="images/logo.png" alt="Logo Papá Noel" class="footer-logo">
+            </div>
+
+            <!-- Enlaces de interés -->
+            <div class="col-md-4">
+                <h5 class="mb-3">Enlaces de interés</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Viaje al pueblo de Papá Noel</a></li>
+                    <li><a href="#" class="footer-link">Conoce a Papá Noel</a></li>
+                    <li><a href="#" class="footer-link">Personaliza tu elfo</a></li>
+                    <li><a href="#" class="footer-link">Política de privacidad</a></li>
+                </ul>
+            </div>
+
+            <!-- Redes sociales y contacto -->
+            <div class="col-md-4">
+                <h5 class="mb-3">Síguenos en redes</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Instagram</a></li>
+                    <li><a href="#" class="footer-link">Youtube</a></li>
+                    <li><a href="#" class="footer-link">Tik Tok</a></li>
+                </ul>
+                <h5 class="mt-4">Contáctanos</h5>
+                <p class="mb-0"><a href="mailto:support@papanoel.com" class="footer-link">support@papanoel.com</a></p>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="row mt-4">
+            <div class="col text-center">
+                <p class="copyright mb-0">© 2024 Copyright. Todos los derechos reservados</p>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
