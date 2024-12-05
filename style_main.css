@@ -35,6 +35,37 @@ h5, .footer-link, .copyright {
 #p1, #p2, #p3 {
     padding-top: 50px;
 }
+span {
+    color: #333
+}
+/****** MODAL REGISTRO********/
+
+/* Personalización del pop-up */
+.modal-content {
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    color: #4d0000;
+}
+
+/************+FIN MODAL REGISTRO*************/
+
+/**********MODAL INICIO DE SESIÓN*********+/
+
+/* Icono del perfil en el navbar */
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4d0000;
+}
+/************+FIN MODAL inicio de sesión*************/
+
 
 .custom-counter {
     display: flex; /* Distribuye los elementos en línea */
