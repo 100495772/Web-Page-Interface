@@ -5,6 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Papá Noel</title>
 
+    <style>
+        .custom-carousel-control {
+            position: absolute !important;
+            top: 50% !important;
+            transform: translateY(-50%);
+            width: 50px !important;
+            height: 50px !important;
+            background: fixed;
+            background-color: black !important;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1050;
+        }
+
+        .custom-carousel-control.carousel-control-prev {
+            left: -30px;
+        }
+
+        .custom-carousel-control.carousel-control-next {
+            right: -30px;
+        }
+
+        .carousel-indicators button {
+            background-color: #000 !important;
+            border: none;
+            width: 12px !important;
+            height: 12px !important;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+        /* Posicionamiento para asegurar visibilidad */
+        .carousel-indicators {
+            position: absolute;
+            bottom: -40px !important;
+        }
+    </style>
+
     <!-- Preconexión para Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -138,31 +178,104 @@
 </section>
 
 <section class="reseñas-section py-5">
-    <div class="container text-center">
-        <h2 class="reseñas-title">¡Reseñas y opiniones de otros aventureros! ⭐</h2>
-        <div class="row mt-4">
-            <!-- Reseña 1 -->
-            <div class="col-md-4">
-                <div class="reseña-card shadow-sm">
-                    <div class="reseña-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="reseña-text">Una experiencia mágica en cada rincón. Mis hijos no podían dejar de hablar de los renos y el taller de los elfos. ¡Totalmente recomendable!</p>
-                    <p class="reseña-author">Sofía R.</p>
-                </div>
+    <div class="container text-center position-relative">
+        <h2 class="reseñas-title">⭐ ¡Reseñas y opiniones de otros aventureros! ⭐</h2>
+        <!-- Carrusel de reseñas -->
+        <div id="reseñasCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+            <!-- Controles (Flechas) -->
+            <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#reseñasCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next custom-carousel-control" type="button" data-bs-target="#reseñasCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#reseñasCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#reseñasCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#reseñasCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            <!-- Reseña 2 -->
-            <div class="col-md-4">
-                <div class="reseña-card shadow-sm">
-                    <div class="reseña-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="reseña-text">Ver a Papá Noel en persona fue increíble. El ambiente navideño es perfecto, y los elfos fueron muy amables. ¡Volveríamos sin dudarlo!</p>
-                    <p class="reseña-author">Ana María del Pilar</p>
+
+            <!-- Contenido del Carrusel -->
+            <div class="carousel-inner">
+                <!-- Bloque 1 -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="reseña-card shadow-sm">
+                                <div class="reseña-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="reseña-text">Una experiencia mágica en cada rincón. Mis hijos no podían dejar de hablar de los renos y el taller de los elfos. ¡Totalmente recomendable!</p>
+                                <p class="reseña-author">Sofía Ramos</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="reseña-card shadow-sm">
+                                <div class="reseña-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="reseña-text">Ver a Papá Noel en persona fue increíble. El ambiente navideño es perfecto, y los elfos fueron muy amables. ¡Volveríamos sin dudarlo!</p>
+                                <p class="reseña-author">Ana María del Pilar</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="reseña-card shadow-sm">
+                                <div class="reseña-stars">⭐⭐⭐⭐</div>
+                                <p class="reseña-text">La visita al pueblo superó nuestras expectativas. Cada detalle está lleno de magia navideña. Perfecto para familias.</p>
+                                <p class="reseña-author">Sebastián Fors</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <!-- Reseña 3 -->
-            <div class="col-md-4">
-                <div class="reseña-card shadow-sm">
-                    <div class="reseña-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="reseña-text">La visita al pueblo superó nuestras expectativas. Cada detalle está lleno de magia navideña. Perfecto para familias.</p>
-                    <p class="reseña-author">Harry Goldman</p>
+                <!-- Bloque 2 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="reseña-card shadow-sm">
+                                <div class="reseña-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="reseña-text">Todo el ambiente navideño es mágico y sorprendente. ¡Nos encantó la comida!</p>
+                                <p class="reseña-author">Luis Gómez</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="reseña-card shadow-sm">
+                                <div class="reseña-stars">⭐⭐⭐⭐</div>
+                                <p class="reseña-text">Una experiencia inolvidable. No puedo esperar para regresar el próximo año.</p>
+                                <p class="reseña-author">Carmen López</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="reseña-card shadow-sm">
+                                <div class="reseña-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="reseña-text">La decoración y la atención son de otro nivel. ¡Me sentí en el Polo Norte!</p>
+                                <p class="reseña-author">Andrés Pérez</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bloque 3 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="reseña-card shadow-sm">
+                                <div class="reseña-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="reseña-text">¡Papá Noel es real! La mejor experiencia para mis pequeños. Gracias.</p>
+                                <p class="reseña-author">Mariana Torres</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="reseña-card shadow-sm">
+                                <div class="reseña-stars">⭐⭐⭐⭐</div>
+                                <p class="reseña-text">¡Un destino único para los amantes de la Navidad!</p>
+                                <p class="reseña-author">Roberto Pérez</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="reseña-card shadow-sm">
+                                <div class="reseña-stars">⭐⭐⭐⭐</div>
+                                <p class="reseña-text">Excelente lugar para tomar fotografías navideñas y disfrutar del espíritu de las fiestas.</p>
+                                <p class="reseña-author">Clara Fernández</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

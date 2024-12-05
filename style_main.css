@@ -553,6 +553,10 @@ textarea.form-control {
 
 /* Tarjeta de reseña */
 .reseña-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 35vh;
     background-color: #ffffff; /* Fondo blanco */
     border-radius: 10px;
     padding: 20px;
