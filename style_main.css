@@ -47,9 +47,14 @@ span {
 }
 
 .modal-title {
-    font-family: 'Georgia', serif;
+    font-family: 'Mali', serif;
     font-size: 1.5rem;
-    color: #4d0000;
+    color: #333;
+}
+
+.modal-body {
+    font-family: 'Mali', serif;
+    color: #333;
 }
 
 /************+FIN MODAL REGISTRO*************/

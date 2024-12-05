@@ -72,7 +72,7 @@
         </div>
         <!-- Ícono de perfil (oculto inicialmente) -->
         <div id="profileSection" style="display: none;">
-            <img src="images/login.png" alt="Perfil" class="profile-icon me-2" id="btnProfile">
+            <img src="images/login.png" alt="Perfil" class="profile-icon me-2" id="btnProfile" style="cursor: pointer;">
             <span id="usernameDisplay">¡Hola!</span>
             <button type="button" class="btn btn-outline-danger ms-2" id="logoutBtn">Cerrar sesión</button>
         </div>
@@ -142,6 +142,26 @@
                         <button type="submit" class="btn btn-success">Confirmar</button>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para mostrar información del perfil -->
+<div class="modal" id="profileModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background-color: #fdf5e6; border-radius: 10px;">
+            <div class="modal-header">
+                <h5 class="modal-title">Información del Perfil</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div>Nombre de usuario: <span id="profileUsername"></span></div>
+                <div>Email: <span id="profileEmail"></span></div>
+                <div>Tipo de usuario: <span id="profileUserType"></span></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
             </div>
         </div>
     </div>
