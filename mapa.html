@@ -40,8 +40,8 @@
                         ¡Juega!
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="juegaDropdown">
-                        <li><a class="dropdown-item" href="#">Juego 1</a></li>
-                        <li><a class="dropdown-item" href="#">Juego 2</a></li>
+                        <li><a class="dropdown-item" href="juego1.html">Juego 1</a></li>
+                        <li><a class="dropdown-item" href="juego2.html">Juego 2</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -60,6 +60,14 @@
             </form>
             <a href="#" class="btn btn-outline-primary me-2" id="btnLogin">Iniciar sesión</a>
             <a href="#" class="btn btn-outline-primary me-2" id="btnRegistro">Registrarse</a>
+
+            <!-- Icono de perfil y botón de logout (oculto hasta que no se inicie sesión) -->
+            <div id="profileSection" style="display: none;">
+                <img src="images/login.png" alt="Perfil" class="profile-icon me-2" id="btnProfile">
+                <span id="usernameDisplay">¡Hola!</span>
+                <button type="button" class="btn btn-outline-danger ms-2" id="logoutBtn">Cerrar sesión</button>
+            </div>
+
         </div>
     </div>
 </nav>
