@@ -41,22 +41,10 @@ document.addEventListener("DOMContentLoaded", updateNavbar);
 document.addEventListener("DOMContentLoaded", () => {
     const btnProfile = document.getElementById("btnProfile");
 
-    // Mostrar los datos del usuario al hacer clic en el ícono de perfil
-    btnProfile.addEventListener("click", () => {
-        const userData = JSON.parse(localStorage.getItem("userData"));
-
-        if (userData) {
-            // Rellenar el modal con los datos del usuario
-            document.getElementById("profileUsername").textContent = userData.username;
-            document.getElementById("profileEmail").textContent = userData.email;
-            document.getElementById("profileUserType").textContent = userData.userType;
-
-            // Mostrar el modal
-            const modalElement = document.getElementById("profileModal");
-            const modal = new bootstrap.Modal(modalElement);
-            modal.show();
-        } else {
-            alert("No se encontraron datos del usuario. Por favor, regístrate.");
-        }
-    });
+    // Redirigir a la página de perfil al hacer clic en el ícono de perfil
+    if (btnProfile) {
+        btnProfile.addEventListener("click", () => {
+            window.location.href = "miperfil.html";
+        });
+    }
 });
