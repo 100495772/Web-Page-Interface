@@ -172,15 +172,16 @@
     <div class="main-content container">
         <h1>¡Estás en el portal hacia el mundo mágico de Papá Noel!</h1>
         <div class="custom-counter">
-            <span class="label">faltan</span>
-            <span class="days">45</span>
-            <span class="unit">días</span>
-            <span class="hours">17</span>
-            <span class="unit">horas</span>
-            <span class="minutes">32</span>
-            <span class="unit">minutos</span>
-            <span class="seconds">05</span>
-            <span class="unit">segundos</span>
+            <div class="label">Faltan</div>
+            <div class="days"></div>
+            <div class="unit">días</div>
+            <div class="hours"></div>
+            <div class="unit">horas</div>
+            <div class="minutes"></div>
+            <div class="unit">minutos</div>
+            <div class="seconds"></div>
+            <div class="unit">segundos</div>
+            <div class="message"></div>
         </div>
     </div>
 </section>
@@ -205,22 +206,6 @@
     </div>
 </section>
 
-<section class="write-letter-section text-center py-5">
-    <h2 class="mb-4">¡Escribe tu carta para Papá Noel y se la enviamos al instante!</h2>
-    <div class="container">
-        <div class="row align-items-center gy-5">
-            <div class="col-md-6">
-                <img src="images/escribe-tu-carta.png" alt="Niños escribiendo una carta" class="img-fluid rounded">
-            </div>
-            <div class="col-md-6">
-                <p class="letter-description">
-                    ¡Haz llegar tus deseos directamente al Polo Norte! Escribe una carta especial a Papá Noel y cuéntale tus sueños, regalos favoritos o un mensaje de agradecimiento. Solo tienes que llenar el formulario y enviar tu carta.
-                </p>
-                <button class="btn send-letter-btn">Quiero mandar mi carta</button>
-            </div>
-        </div>
-    </div>
-</section>
 
 <section class="map-section text-center text-white py-5">
     <div class="container gy-5">
@@ -275,6 +260,50 @@
             alert("No existe ninguna página correspondiente a ese término.\nIntroduce un término aceptado.");
         }
     }
+
+    // Actualizar el contador
+    function updateCountdown() {
+        // Fecha objetivo y referencias
+        const now = new Date();
+        const targetDate = new Date('2024-12-25T00:00:00');
+        const counterContainer = document.querySelector('.custom-counter');
+        const timeDifference = targetDate - now; // Calcula la diferencia (en milisegundos)
+        if (timeDifference > 0) { // Si todavía no ha llegado a la fecha
+            // Calcular días, horas, minutos y segundos (tener en cuenta que están en milisegndos)
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+            // Actualiza el contenido
+            document.querySelector('.days').textContent = days;
+            document.querySelector('.hours').textContent = hours;
+            document.querySelector('.minutes').textContent = minutes;
+            document.querySelector('.seconds').textContent = seconds;
+            document.querySelector('.message').textContent = '';
+        } else {
+            // Si la fecha ya pasó, ocultamos el contador
+            document.querySelector('.label').textContent = '';
+            document.querySelector('.days').textContent = '';
+            document.querySelector('.hours').textContent = '';
+            document.querySelector('.minutes').textContent = '';
+            document.querySelector('.seconds').textContent = '';
+            // Selecciona todos los elementos con la clase '.unit'
+            const units = document.querySelectorAll('.unit');
+            units.forEach(unit => {
+                unit.textContent = '';
+            });
+
+            // Mostrar el mensaje
+            counterContainer.style.display = 'block';
+            counterContainer.querySelector('.message').textContent = '🎅 ¡Ya es Navidad! Disfruta de la magia. 🎄';
+
+            // Detener el intervalo
+            clearInterval(countdownInterval);
+        }
+    }
+    const countdownInterval = setInterval(updateCountdown, 1000);
+    // Ejecuta una actualización inicial
+    updateCountdown();
 </script>
 
 <footer class="footer py-5">
