@@ -19,8 +19,10 @@
   <script src="scripts/register.js"></script>
   <script src="scripts/session.js"></script>
   <script src="scripts/login.js"></script>
+  <script src="scripts/miperfil.js"></script>
   <script src="scripts/cart.js"></script>
-  <script src="scripts/confirm-payment.js"></script>
+  <script src="scripts/reserva-videollamada.js"></script>
+
 
 </head>
 <body>
@@ -82,7 +84,7 @@
   </div>
 </nav>
 
-<!-- Modal del carrito -->
+<!-- Modal del carrito-->
 <div class="modal" id="cartModal" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
@@ -103,7 +105,6 @@
     </div>
   </div>
 </div>
-
 
 <!-- Pop-up de registro -->
 <div class="modal" id="registroModal" tabindex="-1">
@@ -135,7 +136,7 @@
             </div>
           </div>
           <div class="d-flex justify-content-between">
-            <button type="button" class="btn btn-danger " data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
             <button type="submit" class="btn btn-success">Confirmar</button>
           </div>
         </form>
@@ -172,96 +173,22 @@
   </div>
 </div>
 
+<section class="profile-section py-5">
+  <div class="container">
+    <h1 class="mb-5">Mi Perfil</h1>
+    <h3 style="font-family: 'Berkshire Swash', cursive;" class="mb-4">Información Personal</h3>
+    <p id="userInfo"></p>
 
-<section class="confirmar-pago-container">
-  <div class="row g-0">
-    <!-- Resumen del pedido -->
-    <div class="col-md-4 bg-resumen p-5">
-      <h2 class="resumen-title">Resumen del pedido</h2>
-      <div id="orderSummary" class="resumen-content mt-4 overflow-auto" style="max-height: 650px;">
-        <!-- Los elementos del carrito se cargarán aquí dinámicamente -->
-      </div>
-      <div class="resumen-footer mt-auto">
-        <h3 class="total-title">Total</h3>
-        <h3 id="totalAmount" class="total-amount">0</h3>
-      </div>
+    <h3 style="font-family: 'Berkshire Swash', cursive;" class="mt-5 mb-4">Mis viajes comprados</h3>
+    <div id="orderHistory" class="row gy-4">
+      <!-- Reservas de viajes del usuario -->
     </div>
 
-
-    <!-- Formulario de pago -->
-    <div class="col-md-8 bg-formulario p-5">
-      <h2 class="formulario-title">Finalizar pedido</h2>
-
-      <div class="mt-4">
-        <h3 class="section-title">Detalles personales</h3>
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <input type="text" class="form-control" placeholder="Nombre">
-          </div>
-          <div class="col-md-6 mb-3">
-            <input type="text" class="form-control" placeholder="Apellidos">
-          </div>
-          <div class="col-md-6 mb-3">
-            <input type="email" class="form-control" placeholder="Email">
-          </div>
-          <div class="col-md-6 mb-3">
-            <input type="tel" class="form-control" placeholder="Número de teléfono">
-          </div>
-        </div>
-      </div>
-
-      <!-- Detalles del pago -->
-      <div class="mt-4">
-        <h3 class="section-title">Detalles del pago</h3>
-        <div class="payment-methods mb-3">
-          <img src="images/visa.webp" alt="Visa">
-          <img src="images/paypal.png" alt="PayPal">
-          <img src="images/mastercard.png" alt="Mastercard">
-        </div>
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <input type="text" class="form-control" placeholder="Nombre de la tarjeta">
-          </div>
-          <div class="col-md-6 mb-3">
-            <input type="text" class="form-control" placeholder="Número de la tarjeta">
-          </div>
-          <div class="col-md-6 mb-3">
-            <input type="text" class="form-control" placeholder="CVV">
-          </div>
-          <div class="col-md-6 mb-3">
-            <input type="text" class="form-control" placeholder="Fecha de caducidad (MM/YY)">
-          </div>
-        </div>
-      </div>
-
-      <!-- Dirección -->
-      <div class="mt-4">
-        <h3 class="section-title">Dirección</h3>
-        <div class="row">
-          <div class="col-md-12 mb-3">
-            <input type="text" class="form-control" placeholder="Calle y número">
-          </div>
-          <div class="col-md-6 mb-3">
-            <input type="text" class="form-control" placeholder="Ciudad">
-          </div>
-          <div class="col-md-6 mb-3">
-            <input type="text" class="form-control" placeholder="Estado">
-          </div>
-          <div class="col-md-6 mb-3">
-            <input type="text" class="form-control" placeholder="País">
-          </div>
-          <div class="col-md-6 mb-3">
-            <input type="text" class="form-control" placeholder="Código postal">
-          </div>
-        </div>
-      </div>
-
-      <!-- Botones para realizar pago o cancelar -->
-      <div class="mt-4 d-flex justify-content-between">
-        <button id="cancelOrder" class=" btn btn-secondary">Cancelar</button>
-        <button id="completeOrder" class="btn btn-success">Completar pedido</button>
-      </div>
+    <h3 class="mt-5 mb-4" style="font-family: 'Berkshire Swash', cursive;">Mis Videollamadas</h3>
+    <div id="videocallHistory" class="row gy-4" >
+      <!-- Reservas de videollamadas -->
     </div>
+
   </div>
 </section>
 
@@ -306,8 +233,6 @@
     </div>
   </div>
 </footer>
-
-
 
 
 </body>

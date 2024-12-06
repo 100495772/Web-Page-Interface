@@ -22,9 +22,14 @@ p {
 
 }
 
-h5, .footer-link, .copyright {
+.footer-link, .copyright {
     font-family: "Poppins", cursive;
     font-size: 10px;
+}
+
+h5 {
+    font-family: "Poppins", cursive;
+    font-size: 20px;
 }
 
 /* padding para cada página */
@@ -71,7 +76,7 @@ span {
 }
 /************+FIN MODAL inicio de sesión*************/
 
-
+/***************CONTADOR PAPÁ NOEL*******************/
 .custom-counter {
     display: flex; /* Distribuye los elementos en línea */
     align-items: center; /* Centra verticalmente los elementos */
@@ -120,6 +125,11 @@ span {
     color: #122a5d; /* Color para las etiquetas de las unidades (días, horas, etc.) */
     font-size: 1.5vw;
 
+}
+
+.custom-counter .message {
+    color: #993333;
+    font-size: 3.0vw;
 }
 
 
@@ -195,7 +205,7 @@ span {
     background-size: cover; /* Escala la imagen para cubrir todo el fondo del contenedor */
 }
 
-
+/**************fin contador papá noel*******************/
 
 /*****************SECCIÓN ELIGE TU TIPO DE USUARIO (adulto o niño)*******************/
 .select-visitor-section, .viaje-al-pueblo-section {
@@ -723,6 +733,52 @@ input[type="number"] {
     margin-right: 10px;
 }
 
+/* Estilo .order-item */
+.order-item {
+    border: 2px solid #f4c1c1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* Sombras suaves */
+    position: relative; /* Para posicionar decoraciones */
+    margin-left: 30px;
+}
+
+/* Título de cada paquete */
+.order-item p , hr {
+    color: #b22222;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: 'Mali', cursive;
+    display: block;
+}
+
+.order-item h5, h4 {
+    color: #333333;
+}
+
+/* Botón de eliminar */
+.order-item .remove-item {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.order-item .remove-item:hover {
+    transform: scale(1.1); /* Efecto de zoom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra adicional */
+}
+
+/* Decoración: copo de nieve en la esquina */
+.order-item::before {
+    content: '❄';
+    font-size: 5rem;
+    color: #87ceeb;
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    transform: rotate(-15deg); /* Girado para dar un toque decorativo */
+}
+
+#completeOrder {
+    background-color: darkolivegreen; /* Rojo más intenso */
+}
+
 
 
 /**********************FIN PÁGINA CONFIRMAR PAGO*************/
@@ -806,3 +862,8 @@ input[type="number"] {
 }
 
 /************++fina videollamada directa******************/
+
+/**************** PÁGINA MI PERFIL***************/
+
+
+/*************** fin página mi perfil****************/
