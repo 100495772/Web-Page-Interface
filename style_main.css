@@ -122,6 +122,11 @@ span {
 
 }
 
+.custom-counter .message {
+    color: #993333;
+    font-size: 3.0vw;
+}
+
 
 .logo {
     width: 200px;
