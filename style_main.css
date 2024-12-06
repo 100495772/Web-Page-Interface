@@ -43,9 +43,23 @@ h5 {
 span {
     color: #333
 }
+
+#btnRegistro {
+    background-color: darkseagreen;
+    border: 3px solid darkolivegreen;
+
+}
+
+#btnRegistro:hover {
+    background-color: whitesmoke;
+    color: darkolivegreen;
+    transform: scale(1.05); /* Ligera ampliación */
+    border: 3px solid darkolivegreen;
+}
+
+
 /****** MODAL REGISTRO********/
 
-/* Personalización del pop-up */
 .modal-content {
     border: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -68,12 +82,27 @@ span {
 
 /* Icono del perfil en el navbar */
 .profile-icon {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #4d0000;
+    border: 3px solid #333;
 }
+
+#profileSection {
+    align-items: center;
+    align-content: center;
+}
+
+#shoppingCart, #btnProfile {
+    margin: 15px;
+}
+
+#usernameDisplay {
+    font-size: smaller;
+    font-weight: bold;
+}
+
 /************+FIN MODAL inicio de sesión*************/
 
 /***************CONTADOR PAPÁ NOEL*******************/
@@ -134,8 +163,8 @@ span {
 
 
 .logo {
-    width: 200px;
-    height: 100px;
+    width: 150px;
+    height: 75px;
     object-fit: cover; /* Ajustar la imagen para que no se distorsione */
 }
 
@@ -148,8 +177,13 @@ span {
 .navbar a {
     color: #333;
     font-family: "Mali", cursive;
-    font-weight: 700;
+    font-size: 20px;
     text-align: center;
+    font-weight: 500;
+}
+
+#btnLogin, #btnRegister {
+    margin: 10px;
 }
 
 
@@ -272,6 +306,11 @@ span {
     margin: 0 auto; /* Centra el logo */
 }
 
+.copyright {
+    color: #333333;
+}
+
+/****************fin footer*******************/
 
 /********** PÁGINA ENVÍA TU CARTA *******************/
 .carta-container {
@@ -490,8 +529,6 @@ textarea.form-control {
 }
 
 
-
-
 /****************FIN PÁGINA RESERVA DE VIDEOLLAMADA****************/
 
 /****************PÁGINA RESERVA DE VIAJE RESEÑAS ****************/
@@ -667,14 +704,13 @@ input[type="number"] {
     padding: 40px 20px;
 }
 
-
 /**********************FIN PÁGINA RESERVA TU VIAJE*************/
 
 
 /***************++PÁGINA CONFIRMAR PAGO************************/
 /* Columna de resumen */
 .bg-resumen {
-    background-color: #993333;
+    background-color: #d32f2f;
     color: white;
     display: flex;
     flex-direction: column;
