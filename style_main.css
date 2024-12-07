@@ -445,6 +445,11 @@ textarea.form-control {
 
 }
 
+.info-box p {
+    color: #333;
+    font-weight: lighter;
+}
+
 /* Círculo del porcentaje */
 .circle {
     width: 120px;
