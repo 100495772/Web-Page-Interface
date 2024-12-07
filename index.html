@@ -21,6 +21,8 @@
     <script src="scripts/login.js"></script>
     <script src="scripts/cart.js"></script>
     <script src="scripts/confirm-payment.js"></script>
+    <script src="scripts/buscador.js"></script>
+
 </head>
 <body>
 
@@ -56,8 +58,17 @@
                     </ul>
                 </li>
             </ul>
-            <form class="d-flex me-6">
-                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+            <form class="d-flex me-3" id="searchForm" onsubmit="buscarTermino(event)">
+                <input id="searchInput" class="form-control" list="searchOptions" type="search" placeholder="Buscar" aria-label="Search" autocomplete="off">
+                <datalist id="searchOptions">
+                    <option value="home">
+                    <option value="carta">
+                    <option value="mapa">
+                    <option value="viaje">
+                    <option value="videollamada">
+                    <option value="elfo">
+                    <option value="regalos"></option>
+                </datalist>
                 <button class="btn  btn-outline-success" style="font-size: 10px;" type="submit">🔍</button>
             </form>
             <button class="btn btn-outline-primary me-2" id="btnLogin">Iniciar sesión</button>
@@ -176,7 +187,7 @@
 
 <section class="main-page">
     <div class="main-content container">
-        <h1>¡Estás en el portal hacia el mundo mágico de Papá Noel!</h1>
+        <h1 id="estás-en-el-portal">¡Estás en el portal hacia el mundo mágico de Papá Noel!</h1>
         <div class="custom-counter">
             <div class="label">Faltan</div>
             <div class="days"></div>
@@ -221,7 +232,7 @@
         <p class="mb-4">
             ¡Sigue el recorrido mágico de Papá Noel en tiempo real! Mira en el mapa dónde se encuentra en este momento y descubre las paradas que hace alrededor del mundo mientras lleva alegría y regalos a todos. ¡La magia de la Navidad está a solo un vistazo!
         </p>
-        <button class="btn map-btn">Ver mapa</button>
+        <a href="mapa.html" class="btn map-btn">Ver mapa</a>
     </div>
 </section>
 
@@ -236,36 +247,29 @@
                 <p>
                     Tienes la oportunidad de conocer a Papá Noel cualquier día del año en el Pueblo de Papá Noel. Visitarlo es una experiencia especial, sin importar cuándo decidas hacerlo. Su saco de regalos está siempre cargado de alegría, calidez y amistad. Nos transporta a un mundo de cuentos y leyendas en el que todos, no solo los niños, son bienvenidos.
                 </p>
-                <button class="btn send-letter-btn">Quiero mandar mi carta</button>
+                <a href="reserva-tu-viaje-reseñas.html" class="btn send-letter-btn">Reservar viaje</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="write-letter-section text-center py-5">
+    <h2 class="mb-4">¡Videollamada con Papá Noel!</h2>
+    <div class="container">
+        <div class="row align-items-center gy-5">
+            <div class="col-md-6">
+                <img src="images/videollamada.png" alt="Papá Noel en una videollamada" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <p class="letter-description">
+                    ¡Conoce a Papá Noel en una videollamada mágica y personalizada! Reserva un momento especial para hablar directamente con él, contarle tus deseos, y vivir una experiencia inolvidable desde casa. Papá Noel está esperando para escuchar tus sueños y compartir la magia de la Navidad contigo. ¡Haz que esta Navidad sea única con un saludo directo del Polo Norte!                </p>
+                <a href="reserva-videollamada.html" class="btn send-letter-btn">¡Reservar videollamada!</a>
             </div>
         </div>
     </div>
 </section>
 
 <script>
-    // Mapeo de terminos de búsqueda a la páginas
-    const searchMap = {
-        "home": "index.html",
-        "carta": "escribe-tu-carta.html",
-        "mapa": "mapa.html",
-        "viaje": "reserva-tu-viaje-reseñas.html",
-        "videollamada": "reserva-videollamada.html",
-        "elfo": "juego1.html",
-        "regalos": "juego2.html"
-    };
-    function buscarTermino(event) {
-        event.preventDefault();
-        const query = document.getElementById("searchInput").value.trim().toLowerCase();
-        // Encontrar la página correspondiente al término
-        const page = searchMap[query];
-        if (page) {
-            // Redirigir a la página
-            window.location.href = page;
-        } else {
-            // Si el término no existe en la lista, mostrar una alerta
-            alert("No existe ninguna página correspondiente a ese término.\nIntroduce un término aceptado.");
-        }
-    }
 
     // Actualizar el contador
     function updateCountdown() {
@@ -324,10 +328,12 @@
             <div class="col-md-4">
                 <h5 class="mb-3">Enlaces de interés</h5>
                 <ul class="list-unstyled">
-                    <li><a href="reserva-viaje.html" class="footer-link">Viaje al pueblo de Papá Noel</a></li>
-                    <li><a href="reserva-videollamada.html" class="footer-link">Conoce a Papá Noel</a></li>
+                    <li><a href="reserva-viaje.html" class="footer-link">Reserva un viaje</a></li>
+                    <li><a href="reserva-videollamada.html" class="footer-link">Reserva una videollamada</a></li>
                     <li><a href="juego1.html" class="footer-link">Personaliza tu elfo</a></li>
-                    <li><a href="juego2.html" class="footer-link">Política de privacidad</a></li>
+                    <li><a href="juego2.html" class="footer-link">Atrapa regalos</a></li>
+                    <li><a href="mapa.html" class="footer-link">Visualiza el mapa</a></li>
+                    <li><a href="#" class="footer-link">Política de privacidad</a></li>
                 </ul>
             </div>
 

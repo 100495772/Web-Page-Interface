@@ -21,6 +21,8 @@
     <script src="scripts/login.js"></script>
     <script src="scripts/cart.js"></script>
     <script src="scripts/confirm-payment.js"></script>
+    <script src="scripts/buscador.js"></script>
+
 
 </head>
 <body>
@@ -58,8 +60,17 @@
                     </ul>
                 </li>
             </ul>
-            <form class="d-flex me-6">
-                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+            <form class="d-flex me-3" id="searchForm" onsubmit="buscarTermino(event)">
+                <input id="searchInput" class="form-control" list="searchOptions" type="search" placeholder="Buscar" aria-label="Search" autocomplete="off">
+                <datalist id="searchOptions">
+                    <option value="home">
+                    <option value="carta">
+                    <option value="mapa">
+                    <option value="viaje">
+                    <option value="videollamada">
+                    <option value="elfo">
+                    <option value="regalos"></option>
+                </datalist>
                 <button class="btn  btn-outline-success" style="font-size: 10px;" type="submit">🔍</button>
             </form>
             <button class="btn btn-outline-primary me-2" id="btnLogin">Iniciar sesión</button>
@@ -222,9 +233,11 @@
             <div class="col-md-4">
                 <h5 class="mb-3">Enlaces de interés</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="footer-link">Viaje al pueblo de Papá Noel</a></li>
-                    <li><a href="#" class="footer-link">Conoce a Papá Noel</a></li>
-                    <li><a href="#" class="footer-link">Personaliza tu elfo</a></li>
+                    <li><a href="reserva-viaje.html" class="footer-link">Reserva un viaje</a></li>
+                    <li><a href="reserva-videollamada.html" class="footer-link">Reserva una videollamada</a></li>
+                    <li><a href="juego1.html" class="footer-link">Personaliza tu elfo</a></li>
+                    <li><a href="juego2.html" class="footer-link">Atrapa regalos</a></li>
+                    <li><a href="mapa.html" class="footer-link">Visualiza el mapa</a></li>
                     <li><a href="#" class="footer-link">Política de privacidad</a></li>
                 </ul>
             </div>

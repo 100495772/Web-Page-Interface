@@ -25,6 +25,8 @@
   <script src="scripts/login.js"></script>
   <script src="scripts/cart.js"></script>
   <script src="scripts/reserva-videollamada.js"></script>
+  <script src="scripts/buscador.js"></script>
+
 
 
 </head>
@@ -62,8 +64,17 @@
           </ul>
         </li>
       </ul>
-      <form class="d-flex me-6">
-        <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+      <form class="d-flex me-3" id="searchForm" onsubmit="buscarTermino(event)">
+        <input id="searchInput" class="form-control" list="searchOptions" type="search" placeholder="Buscar" aria-label="Search" autocomplete="off">
+        <datalist id="searchOptions">
+          <option value="home">
+          <option value="carta">
+          <option value="mapa">
+          <option value="viaje">
+          <option value="videollamada">
+          <option value="elfo">
+          <option value="regalos"></option>
+        </datalist>
         <button class="btn  btn-outline-success" style="font-size: 10px;" type="submit">🔍</button>
       </form>
       <button class="btn btn-outline-primary me-2" id="btnLogin">Iniciar sesión</button>
@@ -187,7 +198,7 @@
       <!-- Paquete 1 -->
       <div class="col-md-6 mb-4">
         <div class="paquete-card bg-yellow p-4">
-          <h3 class="paquete-title">Experiencia completa - 3 actividades</h3>
+          <h3 class="paquete-title">Experiencia completa - incluye 3 actividades</h3>
           <ul>
             <li>Visita a la oficina de correos</li>
             <li>Visita al taller de elfos</li>
@@ -211,8 +222,8 @@
 
       <!-- Paquete 2 -->
       <div class="col-md-6 mb-4">
-        <div class="paquete-card bg-rosado p-4">
-          <h3 class="paquete-title">Aventura navideña - 2 actividades</h3>
+        <div id="paquete-aventura" class="paquete-card bg-rosado p-4">
+          <h3 class="paquete-title">Aventura navideña - incluye 2 actividades</h3>
           <ul>
             <li>Visita a la oficina de correos</li>
             <li>Visita al taller de elfos</li>
@@ -239,7 +250,7 @@
     <!-- Ir a información de pago y resumen del pedido -->
     <div class="ultimos-pasos-section py-5 text-center">
       <h2 class="ultimos-pasos-title">Último paso, ¡no queda nada!...</h2>
-      <a href="confirmar-pago.html" class="btn ">Proceder al pago</a>
+      <a href="confirmar-pago.html" id="proceder-btn" class="btn">Proceder al pago</a>
     </div>
   </div>
 </section>

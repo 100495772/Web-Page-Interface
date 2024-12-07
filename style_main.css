@@ -32,10 +32,10 @@ h5 {
     font-size: 20px;
 }
 
-/* padding para cada página */
 .main-page, .write-letter-section, .map-section {
     padding: 10% ;
 }
+
 
 #p1, #p2, #p3 {
     padding-top: 50px;
@@ -97,6 +97,7 @@ span {
 #shoppingCart, #btnProfile {
     margin: 15px;
 }
+
 
 #usernameDisplay {
     font-size: smaller;
@@ -202,6 +203,17 @@ span {
     color: #000;
 }
 
+#estás-en-el-portal {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 20px; /* Espaciado interno */
+    background: rgba(211, 47, 47, 0.5); /* Fondo negro semitransparente */
+    border-radius: 10px; /* Bordes redondeados */
+    display: inline-block; /* Hace que el fondo se ajuste al texto */
+}
+
 .btn {
     text-align: center;
     font-family: "Poppins", sans-serif;
@@ -239,7 +251,6 @@ span {
     background-size: cover; /* Escala la imagen para cubrir todo el fondo del contenedor */
 }
 
-/**************fin contador papá noel*******************/
 
 /*****************SECCIÓN ELIGE TU TIPO DE USUARIO (adulto o niño)*******************/
 .select-visitor-section, .viaje-al-pueblo-section {
@@ -316,7 +327,7 @@ span {
 .carta-container {
     max-width: 800px;
     margin: 50px auto;
-    background-color: #f9c1c1; /* Fondo claro */
+    background-color: #f9c1c1;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -420,7 +431,7 @@ textarea.form-control {
 
 /* Cuadro de información */
 .info-box {
-    background-color: #f4a1a1; /* Fondo rosado */
+    background-color: mistyrose;
     color: #333; /* Texto oscuro */
     border-radius: 10px;
     padding: 20px;
@@ -440,7 +451,7 @@ textarea.form-control {
     height: 120px;
     margin: 0 auto 10px;
     border-radius: 50%;
-    background: conic-gradient(#993333 0% 23%, #f4c1c1 23% 100%);
+    background: conic-gradient(#993333 0% 23%, mistyrose 23% 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -485,16 +496,17 @@ textarea.form-control {
 
 /* Contenedor de calendario */
 .calendar-container {
-    background-color: #f4a1a1;
+    background-color: mistyrose;
     padding: 20px;
     border-radius: 10px;
     width: 300px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 /* Selector de tiempo */
 .time-container {
-    background-color: #f4a1a1;
+    background-color: mistyrose;
     padding: 20px;
     border-radius: 10px;
     width: 300px;
@@ -508,7 +520,7 @@ textarea.form-control {
 
 /* Formulario de datos */
 .datos-form {
-    background-color: #f4a1a1;
+    background-color: mistyrose;
     padding: 30px;
     border-radius: 10px;
     width: 90%;
@@ -518,7 +530,7 @@ textarea.form-control {
 
 
 #date-picker {
-    background-color: #f4a1a1;
+    background-color: mistyrose;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 10px;
@@ -528,6 +540,11 @@ textarea.form-control {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+#proceder-btn {
+    background-color: mistyrose;
+    color: #d32f2f;
+}
 
 /****************FIN PÁGINA RESERVA DE VIDEOLLAMADA****************/
 
@@ -582,11 +599,17 @@ textarea.form-control {
     background-color: rgba(255, 241, 212, 1);
     color: black;
     font-family: "Poppins", sans-serif;
+    align-content: center;
+    align-items: center;
+}
+
+.img-viaje {
+    margin: 0 20px 30px 20px;
 }
 
 
 .bg-rosado {
-    background-color: #f4c1c1;
+    background-color: mistyrose;
 }
 
 
@@ -597,8 +620,7 @@ textarea.form-control {
 
 /* Título de la sección */
 .reseñas-title {
-    font-size: 2rem;
-    color: #333;
+    color: #4d0000;
     margin-bottom: 20px;
     font-weight: bold;
 }
@@ -670,9 +692,6 @@ textarea.form-control {
     background-color: rgba(255, 241, 212, 1);
 }
 
-.bg-rosado {
-    background-color: #f4c1c1;
-}
 
 /* Estilo para el campo de número */
 input[type="number"] {
@@ -745,7 +764,7 @@ input[type="number"] {
 
 /* Columna del formulario */
 .bg-formulario {
-    background-color: #f4c1c1;
+    background-color: mistyrose;
     height: 100vh;
     overflow-y: auto;
 }
@@ -757,8 +776,6 @@ input[type="number"] {
 }
 
 .section-title {
-    font-size: 1.3rem;
-    font-weight: bold;
     color: #4d0000;
     margin-bottom: 15px;
 }
@@ -897,9 +914,9 @@ input[type="number"] {
     background-color: #c82333;
 }
 
+#direct-videocall {
+    background-color: mistyrose;
+    color: #dc3545;
+    margin-top: 50px;
+}
 /************++fina videollamada directa******************/
-
-/**************** PÁGINA MI PERFIL***************/
-
-
-/*************** fin página mi perfil****************/
