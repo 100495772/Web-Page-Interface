@@ -34,11 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const reservation = {
             date,
             time,
-            language,
             childName,
             childAge,
             adultName,
             email,
+            language,
         };
 
         // Guardar la reserva en localStorage

@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p><strong>Niño/a:</strong> ${reservation.childName} (${reservation.childAge} años)</p>
                 <p><strong>Adulto/a:</strong> ${reservation.adultName}</p>
                 <p><strong>Email:</strong> ${reservation.email}</p>
+                <p><strong>Idioma:</strong> ${reservation.language}</p>
                 <a href="videollamada-directa.html" class="btn" >Link a la videollamada🎥</a>
             `;
             videocallHistory.appendChild(div);

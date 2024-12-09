@@ -489,6 +489,15 @@ textarea.form-control {
     margin-bottom: 30px;
 }
 
+/* Selector de idioma */
+.language-container {
+    background-color: mistyrose;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Contenedor de calendario */
 .calendar-container {
     background-color: mistyrose;
@@ -1034,6 +1043,12 @@ input[type="number"] {
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
+}
+
+#idioma-llamada {
+    margin-top: 24px;
+    margin-bottom: -24px;
+    margin-right: 20px;
 }
 
 .selector-idioma-container {
