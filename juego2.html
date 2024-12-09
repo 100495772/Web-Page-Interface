@@ -18,17 +18,21 @@
             font-weight: bold;
         }
 
-      #juego-regalos {
+        #juego-regalos {
             position: relative;
-            width: 540px;
-            height: 600px;
+            width: 90%; /* Adjust width to fit smaller screens */
+            max-width: 540px; /* Maintain maximum width for desktop */
+            height: 80vh; /* Use a height relative to the viewport */
+            max-height: 600px; /* Maintain maximum height for desktop */
             border: 2px solid #333;
             overflow: hidden;
             background-color: #fff;
             background-image: url('/images/juego-background2.png');
             background-repeat: no-repeat;
-            background-size: auto;
-        }
+            background-size: cover; /* Adjust to fill the container */
+            box-sizing: border-box;
+            margin: 0 auto; /* Center the game */
+}
         .regalo {
             position: absolute;
             width: 50px;
@@ -103,8 +107,8 @@
                         ¡Juega!
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="juegaDropdown">
-                        <li><a class="dropdown-item" href="juego1.html">Juego 1</a></li>
-                        <li><a class="dropdown-item" href="juego2.html">Juego 2</a></li>
+                        <li><a class="dropdown-item" href="juego1.html">Personaliza tu elfo</a></li>
+                        <li><a class="dropdown-item" href="juego2.html">Atrapa los regalos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">

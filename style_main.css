@@ -111,11 +111,12 @@ span {
     display: flex; /* Distribuye los elementos en línea */
     align-items: center; /* Centra verticalmente los elementos */
     justify-content: center; /* Centra horizontalmente los elementos */
+    width: 65vw;
     background-color: #fdf3e9;
     border: 2px solid #b06a39;
     border-radius: 20px;
     font-family: 'Sofia', cursive;
-    gap: 10px;
+    gap: 8px;
     margin-right: 10%;
     margin-left: 10%;
 }
@@ -130,10 +131,28 @@ span {
 .custom-counter .hours,
 .custom-counter .minutes,
 .custom-counter .seconds {
-    font-size: 4vw;
+    font-size: 3rem;
     font-weight: bold;
 }
 
+
+@media (max-width: 768px) { /* Tablet */
+    .custom-counter .days,
+    .custom-counter .hours,
+    .custom-counter .minutes,
+    .custom-counter .seconds {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) { /* Mobile */
+    .custom-counter .days,
+    .custom-counter .hours,
+    .custom-counter .minutes,
+    .custom-counter .seconds {
+        font-size: 1rem;
+    }
+}
 
 .custom-counter .days {
     color: #b06a39;
@@ -153,8 +172,19 @@ span {
 
 .custom-counter .unit {
     color: #122a5d; /* Color para las etiquetas de las unidades (días, horas, etc.) */
-    font-size: 1.5vw;
+    font-size: 1.5rem;
+}
 
+@media (max-width: 768px) { /* Tablet */
+    .custom-counter .unit {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) { /* Mobile */
+    .custom-counter .unit {
+        font-size: 0.5rem;
+    }
 }
 
 .custom-counter .message {
@@ -205,6 +235,7 @@ span {
 
 #estás-en-el-portal {
     color: white;
+    font-size: 4rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
     text-align: center;
     margin: 20px 0;
@@ -212,6 +243,18 @@ span {
     background: rgba(211, 47, 47, 0.5); /* Fondo negro semitransparente */
     border-radius: 10px; /* Bordes redondeados */
     display: inline-block; /* Hace que el fondo se ajuste al texto */
+}
+
+@media (max-width: 768px) { /* Tablet */
+    #estás-en-el-portal {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) { /* Mobile */
+    #estás-en-el-portal {
+        font-size: 1.8rem;
+    }
 }
 
 .btn {
@@ -798,7 +841,6 @@ input[type="number"] {
     align-items: center;
     height: auto;
     background-color: #000;
-    margin: 300px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
