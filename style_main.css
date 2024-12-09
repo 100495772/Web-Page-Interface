@@ -796,21 +796,17 @@ input[type="number"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: auto;
     background-color: #000;
     margin: 300px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.video-placeholder {
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
+#videollamada-directa {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
     border-radius: 10px;
 }
 
