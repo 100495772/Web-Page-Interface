@@ -620,6 +620,44 @@ textarea.form-control {
     font-weight: bold;
 }
 
+.custom-carousel-control {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+    width: 50px !important;
+    height: 50px !important;
+    background: fixed;
+    background-color: black !important;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+
+.custom-carousel-control.carousel-control-prev {
+    left: -30px;
+}
+
+.custom-carousel-control.carousel-control-next {
+    right: -30px;
+}
+
+.carousel-indicators button {
+    background-color: #000 !important;
+    border: none;
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+/* Posicionamiento para asegurar visibilidad */
+.carousel-indicators {
+    position: absolute;
+    bottom: -40px !important;
+}
+
 /* Tarjeta de reseña */
 .reseña-card {
     display: flex;
@@ -830,6 +868,140 @@ input[type="number"] {
 
 
 /**********************FIN PÁGINA CONFIRMAR PAGO*************/
+
+/************+JUEGO 1*******************/
+
+/* Contenedor principal */
+.juego-container {
+    padding: 40px 20px;
+}
+
+/* Título principal */
+.titulo-juego {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.avatar-option {
+    border: 5px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.avatar-option.selected {
+    border-color: #386641;
+}
+
+.navigation-arrow {
+    cursor: pointer;
+    font-size: 6rem;
+    margin: 0 30px 30px 30px;
+    color: white;
+    transition: transform 0.2s;
+}
+
+.navigation-arrow:hover {
+    transform: scale(1.2);
+}
+
+#progress-bar {
+    height: 20px;
+    background-color: #386641;
+}
+
+.step-label {
+    font-size: 0.85rem;
+    text-align: center;
+    flex: 1;
+}
+
+
+.preview {
+    width: 187px;
+    height: 191px;
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+#result {
+    display: none;
+}
+
+/************+FIN JUEGO 1*******************/
+
+/************+JUEGO 2*******************/
+
+/* Título principal */
+
+#juego-regalos {
+    position: relative;
+    width: 90%;
+    max-width: 540px;
+    height: 80vh;
+    max-height: 600px;
+    border: 2px solid #333;
+    overflow: hidden;
+    background-color: #fff;
+    background-image: url('/images/juego-background2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.regalo {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('/images/regalo.png');
+    background-size: cover;
+}
+#player {
+    position: absolute;
+    bottom: 10px;
+    left: 175px;
+    width: 70px;
+    height: 70px;
+    background-image: url('/images/player.png');
+    background-size: cover;
+}
+#puntos {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+}
+#contador {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+}
+/************+FIN JUEGO 2*******************/
+
+/************+MAPA*******************/
+
+.popup-content {
+    text-align: center;
+}
+.popup-content img {
+    width: 250px;
+    height: auto;
+}
+
+.popup-content p {
+    font-size: x-small;
+    color: black;
+}
+
+.popup-content h4 {
+    font-size: medium;
+    color: black;
+}
+
+/************+FIN MAPA*******************/
 
 /************+VIDEOLLAMADA DIRECTA*******************/
 
