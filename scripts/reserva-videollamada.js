@@ -3,18 +3,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const datePicker = document.getElementById("date-picker");
     const timePicker = document.querySelector(".time-container select");
 
+    const languagePicker = document.getElementById("language-picker");
+
     reservationForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
         // Validar que todos los campos estén completos
         const date = datePicker.value;
         const time = timePicker.value;
+        const language = languagePicker.value;
         const childName = document.getElementById("child-name").value.trim();
         const childAge = document.getElementById("child-age").value.trim();
         const adultName = document.getElementById("adult-name").value.trim();
         const email = document.getElementById("email-videocall").value.trim();
 
-        if (!date || !time || !childName || !childAge || !adultName || !email) {
+        if (!date || !time || !language || !childName || !childAge || !adultName || !email) {
             alert("Por favor, completa todos los campos antes de reservar la videollamada.");
             return;
         }
@@ -31,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const reservation = {
             date,
             time,
+            language,
             childName,
             childAge,
             adultName,

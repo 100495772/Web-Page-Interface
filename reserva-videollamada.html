@@ -196,18 +196,32 @@
     <!-- Título principal -->
     <h1 class="titulo-reserva text-center">Reserva tu videollamada con Papá Noel</h1>
 
-    <!-- Paso 1: Elegir fecha -->
+    <!-- Paso 1: Elegir idioma -->
     <div class="step text-center my-5">
-        <h2 class="step-title">1. Elige una fecha 📅</h2>
+        <h2 class="step-title">1. Elige un idioma 🌍</h2>
+        <div class="time-container mx-auto">
+            <select class="form-select" id="language-picker" aria-label="Selecciona un idioma">
+                <option selected>Selecciona un idioma</option>
+                <option value="es">Español</option>
+                <option value="pt">Português</option>
+                <option value="jp">日本語</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Paso 2: Elegir fecha -->
+    <div class="step text-center my-5">
+        <h2 class="step-title">2. Elige una fecha 📅</h2>
         <div class="calendar-container mx-auto">
             <input type="text" id="date-picker" class="form-control text-center" placeholder="Selecciona una fecha" readonly>
         </div>
     </div>
 
 
-    <!-- Paso 2: Elegir hora -->
+    <!-- Paso 3: Elegir hora -->
     <div class="step text-center my-5">
-        <h2 class="step-title">2. Elige una hora ⏰</h2>
+        <h2 class="step-title">3. Elige una hora ⏰</h2>
         <div class="time-container mx-auto">
             <select class="form-select" aria-label="Selecciona una hora">
                 <option selected>Selecciona una hora</option>

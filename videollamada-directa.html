@@ -23,6 +23,7 @@
     <script src="scripts/cart.js"></script>
     <script src="scripts/confirm-payment.js"></script>
     <script src="scripts/buscador.js"></script>
+    <script src="scripts/videollamada-directa.js"></script>
 
 
 </head>
@@ -192,9 +193,10 @@
 
         <!-- Relleno para la videollamada -->
         <div class="video-wrapper my-4">
-            <div class="video-placeholder">
-                <p class="video-text">Aquí aparecerá el vídeo de Papá Noel 🎥</p>
-            </div>
+            <video id="videollamada-directa" controls>
+                <source id="video-source" src="videos/video-es.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+            </video>
         </div>
 
         <!-- Controles de la videollamada -->
@@ -208,6 +210,18 @@
             <button class="btn btn-control btn-end-call" title="Finalizar llamada">
                 🔴
             </button>
+        </div>
+
+        <!-- Control de idioma -->
+        <div class="selector-idioma-container">
+            <div class="selector-idioma">
+                <select class="form-select" id="selector-idioma" aria-label="Selecciona un idioma">
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="jp">日本語</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
         </div>
     </div>
 </section>
