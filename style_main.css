@@ -31,6 +31,10 @@ p {
     background-color: rgba(255, 241, 212, 1);
 }
 
+.migas a {
+    color: blue;
+}
+
 .footer-link, .copyright {
     font-family: "Poppins", cursive;
     font-size: 10px;
@@ -169,7 +173,7 @@ span {
 }
 
 .custom-counter .hours {
-    color: #7a9ba6;
+    color: #5A7C87;
 }
 
 .custom-counter .minutes {
@@ -177,7 +181,7 @@ span {
 }
 
 .custom-counter .seconds {
-    color: #e5b4c3;
+    color: #9D3459;
 }
 
 .custom-counter .unit {
@@ -557,7 +561,7 @@ textarea.form-control {
 
 #proceder-btn {
     background-color: mistyrose;
-    color: #d32f2f;
+    color: #8B1D1D;
 }
 
 /****************FIN PÁGINA RESERVA DE VIDEOLLAMADA****************/
@@ -698,6 +702,7 @@ textarea.form-control {
 
 /* Estrellas */
 .reseña-stars {
+    color: black;
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
@@ -822,6 +827,7 @@ input[type="number"] {
 }
 
 .formulario-title {
+    color: #4d0000;
     font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 20px;
@@ -932,6 +938,7 @@ input[type="number"] {
 }
 
 .step-label {
+    color: white;
     font-size: 0.85rem;
     text-align: center;
     flex: 1;
@@ -987,12 +994,14 @@ input[type="number"] {
     background-size: cover;
 }
 #puntos {
+    color: #000;
     position: absolute;
     top: 10px;
     left: 10px;
     font-size: 20px;
 }
 #contador {
+    color: #000;
     position: absolute;
     top: 10px;
     right: 10px;
@@ -1113,7 +1122,7 @@ input[type="number"] {
 
 #direct-videocall {
     background-color: mistyrose;
-    color: #dc3545;
+    color: #8B1D1D;
     margin-top: 50px;
 }
 /************++fina videollamada directa******************/
