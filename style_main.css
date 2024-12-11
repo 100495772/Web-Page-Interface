@@ -45,8 +45,9 @@ span {
 }
 
 #btnRegistro {
-    background-color: darkseagreen;
+    background-color: rgb(199, 255, 214);
     border: 3px solid darkolivegreen;
+    color: darkolivegreen;
 
 }
 
