@@ -22,6 +22,15 @@ p {
 
 }
 
+.migas {
+    --bs-breadcrumb-divider: '>';
+    z-index: 1000;
+}
+
+.migas ol {
+    background-color: rgba(255, 241, 212, 1);
+}
+
 .footer-link, .copyright {
     font-family: "Poppins", cursive;
     font-size: 10px;
