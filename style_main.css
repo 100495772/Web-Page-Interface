@@ -745,6 +745,10 @@ textarea.form-control {
 
 }
 
+.paquete-card ul {
+    list-style: none;
+}
+
 .bg-yellow {
     background-color: rgba(255, 241, 212, 1);
 }
