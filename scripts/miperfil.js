@@ -1,15 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     const username = localStorage.getItem("loggedInUser");
-    const userOrders = JSON.parse(localStorage.getItem("userOrders")) || {};
-    const userReservations = JSON.parse(localStorage.getItem("userReservations")) || {};
+    const userOrders = JSON.parse(localStorage.getItem("userOrders")) || {}; // usersOrders son los viajes
+    const userReservations = JSON.parse(localStorage.getItem("userReservations")) || {}; // userReservations son las videollamadas
     const orders = userOrders[username] || [];
     const videocalls = userReservations[username] || [];
 
-
-
     const userInfo = document.getElementById("userInfo");
-    const orderHistory = document.getElementById("orderHistory");
-    const videocallHistory = document.getElementById("videocallHistory");
+    const orderHistory = document.getElementById("orderHistory"); // historial de viajes
+    const videocallHistory = document.getElementById("videocallHistory"); // historial de videollamadas
 
     if (!username) {
         alert("Debes iniciar sesión para acceder a tu perfil.");
